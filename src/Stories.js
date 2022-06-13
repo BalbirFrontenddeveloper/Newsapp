@@ -1,9 +1,9 @@
-const Stories = () => {
-return (
-<>
-<h2>Stories</h2>
-</>
-);
-};
+import React from 'react'
 
-export default Stories;
+const Stories = () => {
+  return (
+    <div>Stories</div>
+  )
+}
+
+export default Stories

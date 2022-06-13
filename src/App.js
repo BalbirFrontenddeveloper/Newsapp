@@ -1,17 +1,21 @@
-import React fron 'react';
-import Search from './Search';
-import Pagination from './Pagination';
-import Stories from './Stories';
-
+import React, { useContext } from "react";
+import Search from "./Search";
+import Pagination from "./Pagination";
+import Stories from "./Stories";
+import { ApiContext } from "./Context";
 
 const App = () => {
-return (
-<>
-<Search />
-<Pagination />
-<Stories />
-</>
-);
+
+    const data = useContext(ApiContext);
+
+  return (
+    <>
+    <h2>{data}</h2>
+      <Search />
+      <Pagination />
+      <Stories />
+    </>
+  );
 };
 
 export default App;
