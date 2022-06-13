@@ -51,12 +51,24 @@ const ApiProvider = ({ children }) => {
     })
   }
 
+  const prevpage = () => {
+    dispatch({
+        type: "PREV_PAGE"
+    })
+  }
+
+  const nextpage = () => {
+    dispatch({
+        type: "NEXT_PAGE"
+    })
+  }
+
   useEffect(() => {
-    searchApi(`${API_URL}query=${state.query}`);
-  },[state.query]);
+    searchApi(`${API_URL}query=${state.query}page=${state.page}`);
+  },[state.query, state.page]);
 
   return (
-    <ApiContext.Provider value={{...state, removepost, searchpost}}>
+    <ApiContext.Provider value={{...state, removepost, searchpost, prevpage, nextpage}}>
       { children }
     </ApiContext.Provider>
   );

@@ -1,5 +1,23 @@
 const reducer = (state, action) => {
     switch (action.type) {
+        case "NEXT_PAGE":
+            let pageInc = state.page + 1;
+            if(pageInc >= state.nbPages){
+                pageInc = 0;
+            }
+            return {
+                ...state,
+                page : pageInc
+            }
+        case "PREV_PAGE":
+            let pageDec = state.page - 1;
+            if(pageDec <= 0){
+                pageDec = 0;
+            } 
+            return {
+                ...state,
+                page: pageDec,
+            };
         case "SEARCH_POST":
             return {
                 ...state,
