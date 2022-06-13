@@ -44,12 +44,19 @@ const ApiProvider = ({ children }) => {
     })
   }
 
+  const searchpost = (searchID) => {
+    dispatch({
+        type: "SEARCH_POST",
+        payload: searchID
+    })
+  }
+
   useEffect(() => {
-    searchApi(`${API_URL}query=${state.query}&page=${state.page}`);
-  },[]);
+    searchApi(`${API_URL}query=${state.query}`);
+  },[state.query]);
 
   return (
-    <ApiContext.Provider value={{...state, removepost}}>
+    <ApiContext.Provider value={{...state, removepost, searchpost}}>
       { children }
     </ApiContext.Provider>
   );

@@ -1,5 +1,10 @@
 const reducer = (state, action) => {
     switch (action.type) {
+        case "SEARCH_POST":
+            return {
+                ...state,
+                query: action.payload
+            }
         case "REMOVE_POST":
             return {
                 ...state,
