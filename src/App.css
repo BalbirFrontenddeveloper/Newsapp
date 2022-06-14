@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(215, 240, 275);
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin: 2rem 0;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    font-weight: 400;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.isLoading {
+    display: grid;
+    place-items: center;
+}
+
+.stories-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card {
+    min-width: 20rem;
+    width: 40vw;
+    padding: 4rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    color: #15133c;
+}
+
+.card h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.card_btn {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_btn a {
+    color: #687286;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.card_btn a:last-child {
+    color: red;
+}
+
+.search h3 {
+    display: grid;
+    place-items: center;
+    margin: 1rem 0;
+}
+
+form {
+    display: grid;
+    place-items: center;
+}
+
+input {
+    padding: 1rem;
+    min-width: 40rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    border: none;
+    border-bottom: 0.2rem solid #15133c;
+    outline: none;
+}
+
+.pagination_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #15133c;
+    color: #ffffff;
+    cursor: pointer;
+    cursor: 3rem;
+    display: inline-block;
+}
+
+
+/* Responsive */
+
+@media (max-width: 990px) {
+    html {
+        font-size: 55%;
+    }
+
+    .card {
+        min-width: 45rem;
+        padding: 2.4rem;
+    }
+}
+
+@media (max-width: 755px) {
+    html {
+        font-size: 50%;
+    }
+
+    .card {
+        min-width: 35rem;
+        padding: 2rem;
+    }
+}

@@ -7,13 +7,16 @@ const Stories = () => {
   if(isLoading) {
       return (
           <>
+          <div className="isLoading">
           <h2>Loading....</h2>
+          </div>
           </>
       );
   };
 
   return (
     <>
+    <div className="stories-div">
     {hits.map((curElem) => {
       const { author, title, url, objectID, num_comments } = curElem;
       return (
@@ -26,6 +29,7 @@ const Stories = () => {
           </div>
         </div>
       )})}
+      </div>
       </>
   );
 };

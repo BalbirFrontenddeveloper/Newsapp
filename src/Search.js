@@ -7,6 +7,7 @@ const Search = () => {
   return (
     <>
     <div className='search'>
+      <h3>NewTech App</h3>
         <form onSubmit={(e) => e.preventDefault}>
         <input 
         type="text"
